@@ -13,4 +13,3 @@ class Follower{
     private:
         string name;
 };
-

@@ -13,10 +13,3 @@ string Follower::getName(){
 void Follower::update(string message){
     cout << "Follower " << name << " got message: " << message << endl;
 }
-
-
-
-
-
-
-

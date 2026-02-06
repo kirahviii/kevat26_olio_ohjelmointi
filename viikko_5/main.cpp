@@ -17,7 +17,8 @@ int main(){
     No->post("Henlo muumit");
 
     No->remove(N);
-    
+    No->remove(H);
+
     No->printFollowers();
 
     No->post("Onko kaikki muumit laaksossa?");

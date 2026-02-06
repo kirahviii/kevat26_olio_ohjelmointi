@@ -14,17 +14,16 @@ void Notificator::add(Follower *newF){
 }
 
 void Notificator::remove(Follower *removedF){
-
+    cout << "Notificator removed follower " << removedF->getName() << endl;
     Follower *start = followers;
 
-    if(start == removedF){
-        start = start->next;
+    if(followers == removedF){
+        followers = followers->next;
         return;
     }
     while(start != nullptr){
         if(start->next == removedF){
             start->next = removedF->next; 
-            cout << "Notificator removed follower " << removedF->getName() << endl;
             return;
         }
         else{
@@ -50,11 +49,3 @@ void Notificator::post(string m){
         start = start->next;
     }
 }
-
-
-
-
-
-
-
-
