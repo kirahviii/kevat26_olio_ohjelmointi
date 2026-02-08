@@ -5,12 +5,11 @@ Notificator::Notificator(){
     cout << "Creating notificator" << endl;
 }
 
-void Notificator::add(Follower *newF){    
+void Notificator::add(Follower *addedF){    
+    addedF->next = followers; //"lisätään" listaan lisättävä olio(newF) listan "ketjun" alkuun laittamalla newF:n next-pointer osoittamaan alkuun(followers)
+    followers = addedF;   //"siirretään" alku(followers) osoittamaan lisättyyn olioon(newF)
 
-    newF->next = followers; //"lisätään" listaan lisättävä olio(newF) listan "ketjun" alkuun laittamalla newF:n next-pointer osoittamaan alkuun(followers)
-    followers = newF;   //"siirretään" alku(followers) osoittamaan lisättyyn olioon(newF)
-
-    cout << "Notificator added follower: " << newF->getName() << endl;
+    cout << "Notificator added follower: " << addedF->getName() << endl;
 }
 
 void Notificator::remove(Follower *removedF){
